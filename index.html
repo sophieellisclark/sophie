@@ -1,0 +1,3063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sophie Ellis Clark — Book Discovery & Positioning Strategist helping authors build lasting visibility and reach the right readers through research-driven strategy.">
+    <title>Sophie Ellis Clark | Book Discovery & Positioning Strategist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-cream: #FAF8F4;
+            --color-warm-white: #FFFEF9;
+            --color-dark: #1A1A18;
+            --color-charcoal: #2C2C28;
+            --color-gold: #B8934A;
+            --color-gold-light: #D4AA6A;
+            --color-gold-pale: #F5EDD8;
+            --color-sage: #5C6B5A;
+            --color-sage-light: #E8EDE7;
+            --color-text: #3A3A36;
+            --color-text-muted: #6B6B64;
+            --color-border: #E4DDD0;
+            --font-serif: 'Playfair Display', Georgia, serif;
+            --font-sans: 'Inter', system-ui, sans-serif;
+            --max-width: 1200px;
+            --section-padding: 100px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--color-cream);
+            color: var(--color-text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ── NAVIGATION ── */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(250, 248, 244, 0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--color-border);
+            transition: box-shadow 0.3s ease;
+        }
+
+        nav.scrolled {
+            box-shadow: 0 2px 24px rgba(26, 26, 24, 0.08);
+        }
+
+        .nav-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 76px;
+        }
+
+        .nav-logo {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            line-height: 1.2;
+        }
+
+        .nav-logo-name {
+            font-family: var(--font-serif);
+            font-size: 20px;
+            font-weight: 900;
+            color: var(--color-dark);
+            letter-spacing: 0.01em;
+            text-transform: uppercase;
+            font-style: italic;
+        }
+
+        .nav-logo-tagline {
+            font-size: 10px;
+            font-weight: 500;
+            color: var(--color-gold);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--color-text-muted);
+            text-decoration: none;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-gold);
+        }
+
+        .nav-cta {
+            background: var(--color-dark);
+            color: var(--color-cream) !important;
+            padding: 10px 22px !important;
+            border-radius: 2px;
+            transition: background 0.2s ease !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--color-charcoal);
+            color: var(--color-gold-light) !important;
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 4px;
+            background: none;
+            border: none;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 1.5px;
+            background: var(--color-dark);
+            transition: all 0.3s ease;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 32px 80px;
+            background: var(--color-warm-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 45%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--color-gold-pale) 0%, var(--color-cream) 100%);
+            clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%);
+        }
+
+        .hero-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-bottom: 24px;
+        }
+
+        .hero-eyebrow::before {
+            content: '';
+            display: block;
+            width: 32px;
+            height: 1px;
+            background: var(--color-gold);
+        }
+
+        .hero-headline {
+            font-family: var(--font-serif);
+            font-size: clamp(40px, 5vw, 64px);
+            font-weight: 700;
+            color: var(--color-dark);
+            line-height: 1.12;
+            margin-bottom: 28px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-headline em {
+            font-style: italic;
+            color: var(--color-gold);
+        }
+
+        .hero-body {
+            font-size: 17px;
+            color: var(--color-text-muted);
+            line-height: 1.75;
+            margin-bottom: 44px;
+            max-width: 480px;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--color-dark);
+            color: var(--color-cream);
+            padding: 16px 32px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: all 0.25s ease;
+            border: 2px solid var(--color-dark);
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--color-dark);
+        }
+
+        .btn-primary svg {
+            transition: transform 0.25s ease;
+        }
+
+        .btn-primary:hover svg {
+            transform: translateX(4px);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--color-text);
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            letter-spacing: 0.04em;
+            border-bottom: 1px solid var(--color-gold);
+            padding-bottom: 2px;
+            transition: color 0.2s ease;
+        }
+
+        .btn-secondary:hover {
+            color: var(--color-gold);
+        }
+
+        .hero-visual {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .hero-photo-frame {
+            width: 100%;
+            aspect-ratio: 4/3;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+            box-shadow: 0 8px 32px rgba(26, 26, 24, 0.08);
+            margin-bottom: 4px;
+        }
+
+        .hero-photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-stat-card {
+            background: #fff;
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            padding: 28px 32px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 4px 24px rgba(26, 26, 24, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hero-stat-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(26, 26, 24, 0.1);
+        }
+
+        .hero-stat-icon {
+            width: 52px;
+            height: 52px;
+            background: var(--color-gold-pale);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 22px;
+        }
+
+        .hero-stat-label {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-text-muted);
+            margin-bottom: 4px;
+        }
+
+        .hero-stat-value {
+            font-family: var(--font-serif);
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--color-dark);
+        }
+
+        /* ── SECTION UTILITIES ── */
+        section {
+            padding: var(--section-padding) 32px;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-bottom: 16px;
+        }
+
+        .section-label::before {
+            content: '';
+            display: block;
+            width: 24px;
+            height: 1px;
+            background: var(--color-gold);
+        }
+
+        .section-headline {
+            font-family: var(--font-serif);
+            font-size: clamp(30px, 3.5vw, 46px);
+            font-weight: 700;
+            color: var(--color-dark);
+            line-height: 1.18;
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+        }
+
+        .section-subhead {
+            font-size: 17px;
+            color: var(--color-text-muted);
+            line-height: 1.75;
+            max-width: 600px;
+        }
+
+        .section-header {
+            margin-bottom: 64px;
+        }
+
+        .section-header.centered {
+            text-align: center;
+        }
+
+        .section-header.centered .section-label {
+            justify-content: center;
+        }
+
+        .section-header.centered .section-subhead {
+            margin: 0 auto;
+        }
+
+        /* ── TRUST BAR ── */
+        .trust-bar {
+            background: var(--color-dark);
+            padding: 20px 32px;
+        }
+
+        .trust-bar-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: rgba(255,255,255,0.7);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .trust-item svg {
+            color: var(--color-gold);
+        }
+
+        /* ── ABOUT ── */
+        .about {
+            background: var(--color-warm-white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-image-wrapper {
+            position: relative;
+        }
+
+        .about-image-placeholder {
+            width: 100%;
+            aspect-ratio: 4/5;
+            background: linear-gradient(145deg, var(--color-gold-pale), var(--color-sage-light));
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-serif);
+            font-size: 64px;
+            color: var(--color-gold);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .about-image-placeholder::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 40%;
+            background: linear-gradient(to top, rgba(184, 147, 74, 0.15), transparent);
+            pointer-events: none;
+        }
+
+        .about-accent-box {
+            position: absolute;
+            bottom: -24px;
+            right: -24px;
+            background: var(--color-gold);
+            color: #fff;
+            padding: 24px 28px;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .about-accent-number {
+            font-family: var(--font-serif);
+            font-size: 32px;
+            font-weight: 700;
+            display: block;
+            line-height: 1;
+        }
+
+        .about-accent-text {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            opacity: 0.9;
+        }
+
+        .about-body p {
+            font-size: 16px;
+            color: var(--color-text-muted);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .about-body p:last-of-type {
+            margin-bottom: 36px;
+        }
+
+        .about-values-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+
+        .about-value-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--color-text);
+        }
+
+        .about-value-item::before {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--color-gold);
+            flex-shrink: 0;
+        }
+
+        /* ── APPROACH ── */
+        .approach {
+            background: var(--color-cream);
+        }
+
+        .approach-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2px;
+            margin-top: 64px;
+        }
+
+        .approach-step {
+            background: var(--color-warm-white);
+            padding: 48px 36px;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .approach-step:hover {
+            transform: translateY(-4px);
+            z-index: 1;
+        }
+
+        .approach-step-number {
+            font-family: var(--font-serif);
+            font-size: 64px;
+            font-weight: 700;
+            color: var(--color-border);
+            line-height: 1;
+            margin-bottom: 24px;
+            display: block;
+        }
+
+        .approach-step-icon {
+            font-size: 28px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .approach-step-title {
+            font-family: var(--font-serif);
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--color-dark);
+            margin-bottom: 12px;
+        }
+
+        .approach-step-body {
+            font-size: 14px;
+            color: var(--color-text-muted);
+            line-height: 1.75;
+        }
+
+        .approach-step::after {
+            content: '→';
+            position: absolute;
+            right: -16px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            color: var(--color-gold);
+            z-index: 2;
+            background: var(--color-cream);
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .approach-step:last-child::after {
+            display: none;
+        }
+
+        /* ── SERVICES ── */
+        .services {
+            background: var(--color-dark);
+            color: #fff;
+        }
+
+        .services .section-headline {
+            color: #fff;
+        }
+
+        .services .section-subhead {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+        }
+
+        .service-category {
+            background: rgba(255,255,255,0.04);
+            padding: 48px 40px;
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: background 0.3s ease, border-color 0.3s ease;
+        }
+
+        .service-category:hover {
+            background: rgba(255,255,255,0.07);
+            border-color: rgba(184, 147, 74, 0.3);
+        }
+
+        .service-category-icon {
+            font-size: 32px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .service-category-title {
+            font-family: var(--font-serif);
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .service-category-desc {
+            font-size: 13px;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 28px;
+            line-height: 1.6;
+        }
+
+        .service-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .service-list li {
+            font-size: 13px;
+            color: rgba(255,255,255,0.7);
+            padding-left: 16px;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        .service-list li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--color-gold);
+            font-size: 10px;
+            top: 4px;
+        }
+
+        /* ── PACKAGES ── */
+        .packages {
+            background: var(--color-warm-white);
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .package-card {
+            background: #fff;
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            padding: 48px 40px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .package-card:hover {
+            border-color: var(--color-gold);
+            box-shadow: 0 16px 48px rgba(26, 26, 24, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .package-card.featured {
+            background: var(--color-dark);
+            border-color: var(--color-dark);
+        }
+
+        .package-badge {
+            position: absolute;
+            top: -1px;
+            left: 40px;
+            background: var(--color-gold);
+            color: #fff;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 0 0 4px 4px;
+        }
+
+        .package-name {
+            font-family: var(--font-serif);
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--color-dark);
+            margin-bottom: 8px;
+        }
+
+        .package-card.featured .package-name {
+            color: #fff;
+        }
+
+        .package-tagline {
+            font-size: 14px;
+            color: var(--color-text-muted);
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+
+        .package-card.featured .package-tagline {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .package-divider {
+            height: 1px;
+            background: var(--color-border);
+            margin-bottom: 28px;
+        }
+
+        .package-card.featured .package-divider {
+            background: rgba(255,255,255,0.12);
+        }
+
+        .package-includes-label {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-bottom: 16px;
+        }
+
+        .package-includes {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+
+        .package-includes li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 14px;
+            color: var(--color-text);
+            line-height: 1.5;
+        }
+
+        .package-card.featured .package-includes li {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .package-check {
+            width: 18px;
+            height: 18px;
+            background: var(--color-gold-pale);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .package-check svg {
+            width: 10px;
+            height: 10px;
+            color: var(--color-gold);
+        }
+
+        .package-card.featured .package-check {
+            background: rgba(184, 147, 74, 0.25);
+        }
+
+        .package-cta {
+            display: block;
+            text-align: center;
+            padding: 14px 24px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 2px;
+            border: 2px solid var(--color-dark);
+            color: var(--color-dark);
+            transition: all 0.25s ease;
+        }
+
+        .package-cta:hover {
+            background: var(--color-dark);
+            color: var(--color-cream);
+        }
+
+        .package-card.featured .package-cta {
+            background: var(--color-gold);
+            border-color: var(--color-gold);
+            color: #fff;
+        }
+
+        .package-card.featured .package-cta:hover {
+            background: var(--color-gold-light);
+            border-color: var(--color-gold-light);
+        }
+
+        /* ── IDEAL CLIENTS ── */
+        .clients {
+            background: var(--color-cream);
+        }
+
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .client-card {
+            background: var(--color-warm-white);
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            padding: 32px 28px;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .client-card:hover {
+            border-color: var(--color-gold);
+            box-shadow: 0 8px 24px rgba(26, 26, 24, 0.07);
+        }
+
+        .client-card-icon {
+            font-size: 28px;
+            flex-shrink: 0;
+        }
+
+        .client-card-title {
+            font-family: var(--font-serif);
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--color-dark);
+            margin-bottom: 6px;
+        }
+
+        .client-card-desc {
+            font-size: 13px;
+            color: var(--color-text-muted);
+            line-height: 1.65;
+        }
+
+        /* ── FAQ ── */
+        .faq {
+            background: var(--color-warm-white);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--color-border);
+            border-right: 1px solid var(--color-border);
+        }
+
+        .faq-item:nth-child(even) {
+            border-right: none;
+        }
+
+        .faq-item:nth-last-child(-n+2) {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            padding: 28px 32px;
+            cursor: pointer;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 16px;
+            transition: background 0.2s ease;
+        }
+
+        .faq-question:hover {
+            background: var(--color-gold-pale);
+        }
+
+        .faq-question.active {
+            background: var(--color-gold-pale);
+        }
+
+        .faq-question-text {
+            font-family: var(--font-serif);
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--color-dark);
+            line-height: 1.5;
+            text-align: left;
+        }
+
+        .faq-toggle {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: 1.5px solid var(--color-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--color-gold);
+            font-size: 16px;
+            transition: all 0.3s ease;
+            margin-top: 2px;
+        }
+
+        .faq-question.active .faq-toggle {
+            background: var(--color-gold);
+            color: #fff;
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 0 32px 28px;
+            font-size: 14px;
+            color: var(--color-text-muted);
+            line-height: 1.75;
+        }
+
+        .faq-answer.open {
+            display: block;
+        }
+
+        /* ── BLOG ── */
+        .blog {
+            background: var(--color-cream);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .blog-card {
+            background: var(--color-warm-white);
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+        }
+
+        .blog-card:hover {
+            border-color: var(--color-gold);
+            box-shadow: 0 12px 36px rgba(26, 26, 24, 0.09);
+            transform: translateY(-4px);
+        }
+
+        .blog-card-image {
+            height: 180px;
+            background: linear-gradient(135deg, var(--color-gold-pale), var(--color-sage-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            position: relative;
+        }
+
+        .blog-card-category {
+            position: absolute;
+            bottom: 12px;
+            left: 16px;
+            background: var(--color-dark);
+            color: var(--color-gold-light);
+            font-size: 9px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 2px;
+        }
+
+        .blog-card-body {
+            padding: 28px;
+        }
+
+        .blog-card-title {
+            font-family: var(--font-serif);
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--color-dark);
+            line-height: 1.45;
+            margin-bottom: 12px;
+        }
+
+        .blog-card-excerpt {
+            font-size: 13px;
+            color: var(--color-text-muted);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .blog-card-meta {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* ── CONTACT SECTION ── */
+        .contact-section {
+            background: var(--color-cream);
+            padding: var(--section-padding) 32px;
+        }
+
+        .contact-wrapper {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .contact-info {
+            padding-top: 8px;
+        }
+
+        .contact-photo-frame {
+            width: 100%;
+            max-width: 320px;
+            aspect-ratio: 1/1;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+            box-shadow: 0 8px 32px rgba(26, 26, 24, 0.07);
+            margin-bottom: 32px;
+        }
+
+        .contact-photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .contact-info-intro {
+            font-size: 16px;
+            color: var(--color-text-muted);
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .contact-detail-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+
+        .contact-detail-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .contact-detail-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--color-gold-pale);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--color-gold);
+        }
+
+        .contact-detail-icon svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .contact-detail-label {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-text-muted);
+            margin-bottom: 4px;
+        }
+
+        .contact-detail-value {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--color-dark);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .contact-detail-value:hover {
+            color: var(--color-gold);
+        }
+
+        /* Social Links */
+        .social-connect-label {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--color-text-muted);
+            margin-bottom: 16px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-link {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1.5px solid var(--color-border);
+            background: #fff;
+            color: var(--color-text-muted);
+        }
+
+        .social-link:hover {
+            border-color: var(--color-gold);
+            background: var(--color-gold-pale);
+            color: var(--color-gold);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(184, 147, 74, 0.2);
+        }
+
+        .social-link svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Contact Form */
+        .contact-form-wrapper {
+            background: #fff;
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            padding: 52px 48px;
+            box-shadow: 0 8px 40px rgba(26, 26, 24, 0.06);
+        }
+
+        .contact-form-title {
+            font-family: var(--font-serif);
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--color-dark);
+            margin-bottom: 8px;
+        }
+
+        .contact-form-subtitle {
+            font-size: 14px;
+            color: var(--color-text-muted);
+            margin-bottom: 36px;
+            line-height: 1.65;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-text-muted);
+            margin-bottom: 8px;
+        }
+
+        .form-label span {
+            color: var(--color-gold);
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 14px 18px;
+            background: var(--color-cream);
+            border: 1.5px solid var(--color-border);
+            border-radius: 2px;
+            font-family: var(--font-sans);
+            font-size: 14px;
+            color: var(--color-dark);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            outline: none;
+            appearance: none;
+        }
+
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: #b0a99a;
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            border-color: var(--color-gold);
+            box-shadow: 0 0 0 3px rgba(184, 147, 74, 0.1);
+            background: #fff;
+        }
+
+        .form-select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23B8934A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            padding-right: 44px;
+            cursor: pointer;
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 140px;
+            line-height: 1.6;
+        }
+
+        .form-checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 28px;
+        }
+
+        .form-checkbox {
+            width: 18px;
+            height: 18px;
+            border: 1.5px solid var(--color-border);
+            border-radius: 2px;
+            background: var(--color-cream);
+            cursor: pointer;
+            flex-shrink: 0;
+            margin-top: 2px;
+            accent-color: var(--color-gold);
+        }
+
+        .form-checkbox-label {
+            font-size: 13px;
+            color: var(--color-text-muted);
+            line-height: 1.6;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 16px 32px;
+            background: var(--color-dark);
+            color: var(--color-cream);
+            border: 2px solid var(--color-dark);
+            border-radius: 2px;
+            font-family: var(--font-sans);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .form-submit:hover {
+            background: transparent;
+            color: var(--color-dark);
+        }
+
+        .form-submit svg {
+            transition: transform 0.25s ease;
+        }
+
+        .form-submit:hover svg {
+            transform: translateX(4px);
+        }
+
+        .form-note {
+            font-size: 12px;
+            color: var(--color-text-muted);
+            text-align: center;
+            margin-top: 16px;
+            line-height: 1.6;
+        }
+
+        /* Success message */
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .form-success.show {
+            display: block;
+        }
+
+        .form-success-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--color-gold-pale);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 28px;
+        }
+
+        .form-success-title {
+            font-family: var(--font-serif);
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--color-dark);
+            margin-bottom: 10px;
+        }
+
+        .form-success-body {
+            font-size: 14px;
+            color: var(--color-text-muted);
+            line-height: 1.7;
+        }
+
+        /* ── CTA BANNER ── */
+        .cta-banner {
+            background: var(--color-dark);
+            padding: 100px 32px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -10%;
+            width: 50%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(184, 147, 74, 0.12) 0%, transparent 70%);
+        }
+
+        .cta-banner::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 50%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(92, 107, 90, 0.12) 0%, transparent 70%);
+        }
+
+        .cta-banner-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .cta-banner-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-bottom: 24px;
+        }
+
+        .cta-banner-eyebrow::before,
+        .cta-banner-eyebrow::after {
+            content: '';
+            display: block;
+            width: 24px;
+            height: 1px;
+            background: var(--color-gold);
+        }
+
+        .cta-banner-headline {
+            font-family: var(--font-serif);
+            font-size: clamp(32px, 4vw, 52px);
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .cta-banner-headline em {
+            font-style: italic;
+            color: var(--color-gold-light);
+        }
+
+        .cta-banner-body {
+            font-size: 17px;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.7;
+            margin-bottom: 44px;
+        }
+
+        .cta-banner-actions {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-gold {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--color-gold);
+            color: #fff;
+            padding: 16px 36px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 2px;
+            border: 2px solid var(--color-gold);
+            transition: all 0.25s ease;
+        }
+
+        .btn-gold:hover {
+            background: var(--color-gold-light);
+            border-color: var(--color-gold-light);
+        }
+
+        .btn-outline-light {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: transparent;
+            color: rgba(255,255,255,0.8);
+            padding: 16px 36px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 2px;
+            border: 2px solid rgba(255,255,255,0.2);
+            transition: all 0.25s ease;
+        }
+
+        .btn-outline-light:hover {
+            border-color: rgba(255,255,255,0.5);
+            color: #fff;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: #111110;
+            padding: 72px 32px 40px;
+        }
+
+        .footer-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            padding-bottom: 56px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            margin-bottom: 36px;
+        }
+
+        .footer-brand-name {
+            font-family: var(--font-serif);
+            font-size: 22px;
+            font-weight: 900;
+            font-style: italic;
+            color: #fff;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.01em;
+        }
+
+        .footer-brand-tagline {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-bottom: 20px;
+        }
+
+        .footer-brand-desc {
+            font-size: 14px;
+            color: rgba(255,255,255,0.45);
+            line-height: 1.75;
+            max-width: 300px;
+            margin-bottom: 28px;
+        }
+
+        /* Footer social links */
+        .footer-social-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer-social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.12);
+            background: rgba(255,255,255,0.04);
+            color: rgba(255,255,255,0.5);
+        }
+
+        .footer-social-link:hover {
+            border-color: var(--color-gold);
+            background: rgba(184, 147, 74, 0.15);
+            color: var(--color-gold-light);
+            transform: translateY(-3px);
+        }
+
+        .footer-social-link svg {
+            width: 17px;
+            height: 17px;
+        }
+
+        .footer-col-title {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            font-size: 14px;
+            color: rgba(255,255,255,0.55);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--color-gold-light);
+        }
+
+        .footer-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .footer-copy {
+            font-size: 13px;
+            color: rgba(255,255,255,0.3);
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-bottom-links a {
+            font-size: 12px;
+            color: rgba(255,255,255,0.3);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-bottom-links a:hover {
+            color: var(--color-gold-light);
+        }
+
+        /* ── MISSION STRIP ── */
+        .mission-strip {
+            background: var(--color-gold-pale);
+            padding: 80px 32px;
+            text-align: center;
+        }
+
+        .mission-strip-inner {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .mission-quote {
+            font-family: var(--font-serif);
+            font-size: clamp(22px, 3vw, 34px);
+            font-weight: 500;
+            font-style: italic;
+            color: var(--color-dark);
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .mission-quote em {
+            color: var(--color-gold);
+            font-style: normal;
+        }
+
+        .mission-attr {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-text-muted);
+        }
+
+        /* ── SCROLL ANIMATIONS ── */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fade-in-delay-1 { transition-delay: 0.1s; }
+        .fade-in-delay-2 { transition-delay: 0.2s; }
+        .fade-in-delay-3 { transition-delay: 0.3s; }
+
+        /* ── MOBILE MENU ── */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 76px;
+            left: 0;
+            right: 0;
+            background: var(--color-warm-white);
+            border-bottom: 1px solid var(--color-border);
+            padding: 24px 32px;
+            z-index: 999;
+            box-shadow: 0 8px 32px rgba(26,26,24,0.1);
+        }
+
+        .mobile-menu.open {
+            display: block;
+        }
+
+        .mobile-menu-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .mobile-menu-links a {
+            display: block;
+            padding: 12px 0;
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--color-text);
+            text-decoration: none;
+            border-bottom: 1px solid var(--color-border);
+            transition: color 0.2s ease;
+        }
+
+        .mobile-menu-links a:hover {
+            color: var(--color-gold);
+        }
+
+        .mobile-menu-links a.mobile-cta {
+            margin-top: 12px;
+            background: var(--color-dark);
+            color: var(--color-cream);
+            text-align: center;
+            padding: 14px;
+            border-radius: 2px;
+            border-bottom: none;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            font-size: 13px;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 1024px) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+                gap: 56px;
+            }
+
+            .hero::before {
+                display: none;
+            }
+
+            .hero {
+                background: linear-gradient(180deg, var(--color-warm-white) 0%, var(--color-gold-pale) 100%);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .about-image-wrapper {
+                max-width: 480px;
+            }
+
+            .approach-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .approach-step:nth-child(2)::after {
+                display: none;
+            }
+
+            .approach-step:nth-child(3)::after {
+                content: '→';
+                display: flex;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .packages-grid {
+                grid-template-columns: 1fr;
+                max-width: 480px;
+                margin: 0 auto;
+            }
+
+            .clients-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .faq-item {
+                border-right: none !important;
+            }
+
+            .faq-item:nth-last-child(-n+2) {
+                border-bottom: 1px solid var(--color-border);
+            }
+
+            .faq-item:last-child {
+                border-bottom: none;
+            }
+
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+            }
+
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+                gap: 56px;
+            }
+
+            .contact-form-wrapper {
+                padding: 40px 36px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --section-padding: 72px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+
+            .hero {
+                padding: 100px 24px 72px;
+            }
+
+            section {
+                padding: var(--section-padding) 24px;
+            }
+
+            .contact-section {
+                padding: var(--section-padding) 24px;
+            }
+
+            .trust-bar {
+                padding: 20px 24px;
+            }
+
+            .approach-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .approach-step::after {
+                display: none !important;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .clients-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cta-banner {
+                padding: 72px 24px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form-wrapper {
+                padding: 32px 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-accent-box {
+                right: 0;
+                bottom: -16px;
+            }
+
+            .about-values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .trust-bar-inner {
+                gap: 24px;
+                justify-content: flex-start;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ── NAVIGATION ── -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">
+                <span class="nav-logo-name">Sophie Ellis Clark</span>
+                <span class="nav-logo-tagline">Book Discovery & Positioning</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#blog">Insights</a></li>
+                <li><a href="#contact" class="nav-cta">Book Audit</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-menu-links">
+            <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+            <li><a href="#services" onclick="closeMobileMenu()">Services</a></li>
+            <li><a href="#packages" onclick="closeMobileMenu()">Packages</a></li>
+            <li><a href="#faq" onclick="closeMobileMenu()">FAQ</a></li>
+            <li><a href="#blog" onclick="closeMobileMenu()">Insights</a></li>
+            <li><a href="#contact" class="mobile-cta" onclick="closeMobileMenu()">Book a Discovery Audit</a></li>
+        </ul>
+    </div>
+
+    <!-- ── HERO ── -->
+    <section class="hero" id="hero">
+        <div class="hero-inner">
+            <div class="hero-content">
+                <div class="hero-eyebrow">Book Discovery & Positioning Strategist</div>
+                <h1 class="hero-headline">
+                    Great Books Deserve<br>to Be <em>Discovered.</em>
+                </h1>
+                <p class="hero-body">
+                    Millions of books compete for attention every day. The difference between a forgotten title and a thriving one is rarely the quality of the writing. It's discoverability. I help authors uncover why their books aren't reaching the right readers—and build strategic systems that create lasting visibility.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn-primary">
+                        Book Your Discovery Audit
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                    <a href="#services" class="btn-secondary">
+                        Explore Services
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-photo-frame fade-in">
+                    <img src="ellis.jpg" alt="Sophie Ellis Clark, Book Discovery & Positioning Strategist">
+                </div>
+                <div class="hero-stat-card fade-in">
+                    <div class="hero-stat-icon">📚</div>
+                    <div>
+                        <div class="hero-stat-label">The Challenge</div>
+                        <div class="hero-stat-value">Millions of books competing daily</div>
+                    </div>
+                </div>
+                <div class="hero-stat-card fade-in fade-in-delay-1">
+                    <div class="hero-stat-icon">🔍</div>
+                    <div>
+                        <div class="hero-stat-label">The Solution</div>
+                        <div class="hero-stat-value">Strategic positioning & discovery</div>
+                    </div>
+                </div>
+                <div class="hero-stat-card fade-in fade-in-delay-2">
+                    <div class="hero-stat-icon">📈</div>
+                    <div>
+                        <div class="hero-stat-label">The Result</div>
+                        <div class="hero-stat-value">Lasting visibility, not temporary spikes</div>
+                    </div>
+                </div>
+                <div class="hero-stat-card fade-in fade-in-delay-3">
+                    <div class="hero-stat-icon">🎯</div>
+                    <div>
+                        <div class="hero-stat-label">The Focus</div>
+                        <div class="hero-stat-value">Research before promotion, always</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── TRUST BAR ── -->
+    <div class="trust-bar">
+        <div class="trust-bar-inner">
+            <div class="trust-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Research-Driven Strategy
+            </div>
+            <div class="trust-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                All Genres Welcome
+            </div>
+            <div class="trust-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Personalized Recommendations
+            </div>
+            <div class="trust-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Long-Term Visibility
+            </div>
+            <div class="trust-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Ethical Marketing Practices
+            </div>
+        </div>
+    </div>
+
+    <!-- ── ABOUT ── -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-wrapper fade-in">
+                    <div class="about-image-placeholder">
+                        <img src="ellis.jpg" alt="Sophie Ellis Clark">
+                    </div>
+                    <div class="about-accent-box">
+                        <span class="about-accent-number">100%</span>
+                        <span class="about-accent-text">Tailored Strategies</span>
+                    </div>
+                </div>
+                <div class="about-body fade-in fade-in-delay-1">
+                    <div class="section-label">About Sophie</div>
+                    <h2 class="section-headline">I Believe Every Great Book Deserves the Chance to Be Found.</h2>
+                    <p>Every year, thousands of exceptional books disappear beneath the weight of an overcrowded marketplace. Not because they lack quality. Not because readers wouldn't love them. But because they were never positioned where the right audience could discover them.</p>
+                    <p>That reality is why I founded this consultancy. I'm a Book Discovery & Positioning Strategist dedicated to helping authors identify the hidden barriers preventing their books from reaching readers.</p>
+                    <p>Rather than relying on one-size-fits-all tactics, I begin with research. Every book has its own audience, market position, competitive landscape, and discoverability challenges. My role is to uncover those opportunities and build a strategy that aligns your book with readers actively searching for it.</p>
+                    <p>I don't believe successful book marketing begins with promotion. I believe it begins with understanding.</p>
+                    <div class="about-values-grid">
+                        <div class="about-value-item">Strategy Before Promotion</div>
+                        <div class="about-value-item">Honest Communication</div>
+                        <div class="about-value-item">Reader-First Marketing</div>
+                        <div class="about-value-item">Data-Informed Decisions</div>
+                        <div class="about-value-item">Long-Term Growth</div>
+                        <div class="about-value-item">Authentic Relationships</div>
+                        <div class="about-value-item">Personalized Solutions</div>
+                        <div class="about-value-item">Excellence in Execution</div>
+                    </div>
+                    <a href="#contact" class="btn-primary">
+                        Work With Sophie
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── MISSION STRIP ── -->
+    <div class="mission-strip">
+        <div class="mission-strip-inner">
+            <p class="mission-quote">"Our mission is to ensure outstanding books are never overlooked simply because they lack visibility. We believe <em>discoverability should never be reserved</em> for bestselling authors with large marketing budgets."</p>
+            <div class="mission-attr">— Sophie Ellis Clark, Founder</div>
+        </div>
+    </div>
+
+    <!-- ── APPROACH ── -->
+    <section class="approach" id="approach">
+        <div class="container">
+            <div class="section-header centered fade-in">
+                <div class="section-label">My Methodology</div>
+                <h2 class="section-headline">Strategy Before Promotion.</h2>
+                <p class="section-subhead">When a book is positioned correctly, every marketing effort becomes significantly more effective. Here's how I approach each engagement.</p>
+            </div>
+            <div class="approach-steps">
+                <div class="approach-step fade-in">
+                    <span class="approach-step-number">01</span>
+                    <span class="approach-step-icon">🔎</span>
+                    <div class="approach-step-title">Research & Discovery</div>
+                    <p class="approach-step-body">I begin by understanding your book, your current positioning, and the specific barriers preventing it from reaching readers. No assumptions—only evidence.</p>
+                </div>
+                <div class="approach-step fade-in fade-in-delay-1">
+                    <span class="approach-step-number">02</span>
+                    <span class="approach-step-icon">🗺️</span>
+                    <div class="approach-step-title">Market Analysis</div>
+                    <p class="approach-step-body">I analyze your competitive landscape, identify your true target audience, and pinpoint where discoverability opportunities are being missed.</p>
+                </div>
+                <div class="approach-step fade-in fade-in-delay-2">
+                    <span class="approach-step-number">03</span>
+                    <span class="approach-step-icon">⚙️</span>
+                    <div class="approach-step-title">Strategic Planning</div>
+                    <p class="approach-step-body">I build a tailored roadmap that addresses your book's unique challenges—from metadata and Amazon positioning to reader community outreach and author branding.</p>
+                </div>
+                <div class="approach-step fade-in fade-in-delay-3">
+                    <span class="approach-step-number">04</span>
+                    <span class="approach-step-icon">📊</span>
+                    <div class="approach-step-title">Long-Term Growth</div>
+                    <p class="approach-step-body">Visibility isn't built overnight. I help you establish sustainable systems that extend beyond launch day and continue creating opportunities for years to come.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── SERVICES ── -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-label" style="color:var(--color-gold-light);">What I Offer</div>
+                <h2 class="section-headline">Comprehensive Book Discovery Services</h2>
+                <p class="section-subhead" style="color:rgba(255,255,255,0.55);">Every recommendation is tailored to the individual author—not copied from a generic checklist.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-category fade-in">
+                    <span class="service-category-icon">🔍</span>
+                    <div class="service-category-title">Discovery & Strategy</div>
+                    <p class="service-category-desc">Foundational research and strategic assessment to uncover your book's true positioning challenges.</p>
+                    <ul class="service-list">
+                        <li>Book Discovery Audit</li>
+                        <li>Amazon Visibility Assessment</li>
+                        <li>Competitive Market Analysis</li>
+                        <li>Reader Persona Research</li>
+                        <li>Marketing Gap Analysis</li>
+                        <li>Publishing Strategy Consultation</li>
+                        <li>Author Growth Roadmap</li>
+                    </ul>
+                </div>
+                <div class="service-category fade-in fade-in-delay-1">
+                    <span class="service-category-icon">⚡</span>
+                    <div class="service-category-title">Amazon Optimization</div>
+                    <p class="service-category-desc">Maximize your book's discoverability within Amazon's ecosystem through precise, data-informed optimization.</p>
+                    <ul class="service-list">
+                        <li>Category Optimization</li>
+                        <li>Keyword Research</li>
+                        <li>Metadata Optimization</li>
+                        <li>Book Description Optimization</li>
+                        <li>Series Page Optimization</li>
+                        <li>A+ Content Strategy</li>
+                        <li>Author Central Optimization</li>
+                        <li>Browse Category Research</li>
+                    </ul>
+                </div>
+                <div class="service-category fade-in fade-in-delay-2">
+                    <span class="service-category-icon">✍️</span>
+                    <div class="service-category-title">Author Brand Development</div>
+                    <p class="service-category-desc">Build a professional author presence that resonates with readers and reflects your unique voice.</p>
+                    <ul class="service-list">
+                        <li>Author Positioning</li>
+                        <li>Personal Brand Strategy</li>
+                        <li>Author Website Consulting</li>
+                        <li>Goodreads Optimization</li>
+                        <li>Biography Optimization</li>
+                        <li>Brand Messaging</li>
+                        <li>Media Kit Development</li>
+                    </ul>
+                </div>
+                <div class="service-category fade-in">
+                    <span class="service-category-icon">🌱</span>
+                    <div class="service-category-title">Reader Growth</div>
+                    <p class="service-category-desc">Strategic outreach to the communities, platforms, and influencers where your ideal readers already gather.</p>
+                    <ul class="service-list">
+                        <li>Reader Community Outreach</li>
+                        <li>Book Club Outreach</li>
+                        <li>ARC Campaign Strategy</li>
+                        <li>Newsletter Promotions</li>
+                        <li>Podcast Outreach</li>
+                        <li>BookTok Campaign Planning</li>
+                        <li>Bookstagram Outreach</li>
+                        <li>Library Awareness Campaigns</li>
+                        <li>Reviewer Outreach Strategy</li>
+                    </ul>
+                </div>
+                <div class="service-category fade-in fade-in-delay-1">
+                    <span class="service-category-icon">🚀</span>
+                    <div class="service-category-title">Book Launch Services</div>
+                    <p class="service-category-desc">Carefully planned launches designed to maximize initial momentum and establish long-term discoverability.</p>
+                    <ul class="service-list">
+                        <li>Launch Planning</li>
+                        <li>Launch Calendar</li>
+                        <li>Pre-order Campaign</li>
+                        <li>Release Strategy</li>
+                        <li>Cross-Promotion Planning</li>
+                        <li>Promotional Timeline</li>
+                        <li>Reader Engagement Campaign</li>
+                    </ul>
+                </div>
+                <div class="service-category fade-in fade-in-delay-2">
+                    <span class="service-category-icon">📖</span>
+                    <div class="service-category-title">Series & Catalog Growth</div>
+                    <p class="service-category-desc">Maximize the commercial potential of your entire body of work through smart series architecture and catalog positioning.</p>
+                    <ul class="service-list">
+                        <li>Series Architecture</li>
+                        <li>Back Matter Optimization</li>
+                        <li>Cross-Selling Strategy</li>
+                        <li>Reader Journey Mapping</li>
+                        <li>Catalog Positioning</li>
+                        <li>Read-Through Optimization</li>
+                        <li>Quarterly Marketing Reviews</li>
+                        <li>Performance Audits</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── PACKAGES ── -->
+    <section class="packages" id="packages">
+        <div class="container">
+            <div class="section-header centered fade-in">
+                <div class="section-label">Engagements</div>
+                <h2 class="section-headline">Choose Your Path Forward.</h2>
+                <p class="section-subhead">Three engagement levels designed to meet authors wherever they are in their publishing journey.</p>
+            </div>
+            <div class="packages-grid">
+                <div class="package-card fade-in">
+                    <div class="package-name">Discovery Audit</div>
+                    <p class="package-tagline">A detailed assessment of why your book isn't reaching the right readers—and a clear map of what to do next.</p>
+                    <div class="package-divider"></div>
+                    <div class="package-includes-label">Includes</div>
+                    <ul class="package-includes">
+                        <li>
+                            <span class="package-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            </span>
+                            Full book & positioning analysis
+                        </li>
+                        <li>
+                            <span class="package-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            </span>
+                            Amazon visibility audit
+                        </li>
+                        <li>
+                            <span class="package-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            </span>
+                            Comprehensive visibility report
+                        </li>
+                        <li>
+                            <span class="package-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            </span>
+                            Prioritized strategic recommendations
+                        </li>
+                    </ul>
+                    <a href="#contact" class="package-cta">Get Started</a>
+                </div>
+                <div class="package-card featured fade-in fade-in-delay-1">
+                    <div class="package-badge">Most Popular</div>
+                    <div class="package-name">Discovery Strategy</div>
+                    <p class="package-tagline">A tailored strategy built to address your specific marketing challenges and align your book with the right readers.</p>
+                    <div class="package-divider"></div>
+                    <div class="package-includes-label">Includes</div>
+                    <ul class="package-includes">
+                        <li>
+                            <span class="package-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            </span>
+                            Custom action plan & roadmap
+                        </li>
+                        <li>
+                            <span class="package-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            </span>
+                            Market positioning strategy
+                        </li>
+                        <li>
+                            <span class="package-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            </span>
+                            Reader targeting framework
+                        </li>
+                        <li>
+                            <span class="package-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            </span>
+                            Metadata & category recommendations
+                        </li>
+                        <li>
+                            <span class="package-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            </span>
+                            Full discovery roadmap
+                        </li>
+                    </ul>
+                    <a href="#contact" class="package-cta">Get Started</a>
+                </div>
+                <div class="package-card fade-in fade-in-delay-2">
+                    <div class="package-name">Discovery Partnership</div>
+                    <p class="package-tagline">An ongoing consulting relationship for authors committed to building long-term readership and sustained visibility.</p>
+                    <div class="package-divider"></div>
+                    <div class="package-includes-label">Includes</div>
+                    <ul class="package-includes">
+                        <li>
+                            <span class="package-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            </span>
+                            Ongoing strategic consulting
+                        </li>
+                        <li>
+                            <span class="package-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            </span>
+                            Strategy implementation support
+                        </li>
+                        <li>
+                            <span class="package-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            </span>
+                            Campaign reviews & optimization
+                        </li>
+                        <li>
+                            <span class="package-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            </span>
+                            Quarterly performance audits
+                        </li>
+                        <li>
+                            <span class="package-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            </span>
+                            Long-term growth planning
+                        </li>
+                    </ul>
+                    <a href="#contact" class="package-cta">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── IDEAL CLIENTS ── -->
+    <section class="clients" id="clients">
+        <div class="container">
+            <div class="section-header centered fade-in">
+                <div class="section-label">Who I Work With</div>
+                <h2 class="section-headline">Built for Authors at Every Stage.</h2>
+                <p class="section-subhead">Whether you're publishing your first book or managing an established catalog, the goal remains the same: connecting exceptional work with the readers it was written for.</p>
+            </div>
+            <div class="clients-grid">
+                <div class="client-card fade-in">
+                    <div class="client-card-icon">🌟</div>
+                    <div>
+                        <div class="client-card-title">Debut Authors</div>
+                        <p class="client-card-desc">Building a strong foundation from the very first publication with research-backed positioning and a clear discovery roadmap.</p>
+                    </div>
+                </div>
+                <div class="client-card fade-in fade-in-delay-1">
+                    <div class="client-card-icon">📚</div>
+                    <div>
+                        <div class="client-card-title">Established Authors</div>
+                        <p class="client-card-desc">Revitalizing existing titles and catalogs, identifying missed opportunities, and building sustainable long-term visibility.</p>
+                    </div>
+                </div>
+                <div class="client-card fade-in fade-in-delay-2">
+                    <div class="client-card-icon">🖊️</div>
+                    <div>
+                        <div class="client-card-title">Self-Published Authors</div>
+                        <p class="client-card-desc">Providing the strategic expertise that allows independent authors to compete effectively in a crowded marketplace.</p>
+                    </div>
+                </div>
+                <div class="client-card fade-in">
+                    <div class="client-card-icon">🏛️</div>
+                    <div>
+                        <div class="client-card-title">Traditionally Published Authors</div>
+                        <p class="client-card-desc">Supplementing publisher marketing with targeted discovery strategy to maximize reach beyond standard promotional support.</p>
+                    </div>
+                </div>
+                <div class="client-card fade-in fade-in-delay-1">
+                    <div class="client-card-icon">🔀</div>
+                    <div>
+                        <div class="client-card-title">Hybrid Authors</div>
+                        <p class="client-card-desc">Aligning strategy across both traditional and self-published titles for cohesive brand presence and maximum discoverability.</p>
+                    </div>
+                </div>
+                <div class="client-card fade-in fade-in-delay-2">
+                    <div class="client-card-icon">🏢</div>
+                    <div>
+                        <div class="client-card-title">Small Presses & Independents</div>
+                        <p class="client-card-desc">Helping independent publishers develop discovery strategies across their entire catalog without requiring large marketing budgets.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FAQ ── -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header centered fade-in">
+                <div class="section-label">Questions & Answers</div>
+                <h2 class="section-headline">Frequently Asked Questions.</h2>
+                <p class="section-subhead">Everything you need to know before getting started.</p>
+            </div>
+            <div class="faq-grid fade-in">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-question-text">What types of authors do you work with?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        I work with debut authors, established authors, self-published authors, traditionally published authors, hybrid authors, and small independent publishers. If you've written a book and want it to reach the readers it deserves, I'm here to help.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-question-text">Do you work with both self-published and traditionally published authors?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Absolutely. The discoverability challenges faced by each group are different, and my strategies are tailored accordingly. Self-published authors often have more control over metadata and positioning, while traditionally published authors may need supplemental discovery support beyond what their publisher provides.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-question-text">Do you guarantee book sales?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        No. Any consultant who guarantees specific sales numbers is not being honest with you. What I can guarantee is thorough research, expert strategic analysis, and honest recommendations designed to meaningfully improve your book's discoverability. Results depend on many variables, including the book itself, the market, and implementation of the strategy.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-question-text">What is included in a Discovery Audit?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        A Discovery Audit includes a full analysis of your book's current positioning, an Amazon visibility assessment, a review of your metadata, categories, and book description, and a detailed report with prioritized strategic recommendations to improve discoverability.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-question-text">Can you help books that have already been published?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Yes. In fact, many of the authors I work with have books that have been out for months or years. Discoverability can be improved at any stage. Optimizing metadata, repositioning categories, improving the book description, and reaching new reader communities can all make a meaningful difference for backlist titles.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-question-text">Do you work with every genre?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Yes. I work across all genres of fiction and non-fiction. Each genre has its own competitive landscape, reader community, and discovery ecosystem. My research process is designed to account for those differences and develop strategies appropriate to each book's specific market.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-question-text">How long does a typical project take?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Timeline varies by engagement. A Discovery Audit typically takes one to two weeks to complete. A full Discovery Strategy may take two to four weeks depending on the complexity of the project. The Discovery Partnership is an ongoing relationship with no fixed end date.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-question-text">Can you help with an entire series?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Yes, and series marketing is one of the areas where strategic planning makes the greatest difference. I offer series architecture reviews, back matter optimization, read-through strategy, and cross-selling recommendations designed to turn a reader of book one into a fan of the entire series.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-question-text">Do you work with authors outside your country?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Yes. I work with authors worldwide. Book discovery strategy—particularly around Amazon, metadata, and digital reader communities—is applicable regardless of where you or your readers are located.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-question-text">How do we get started?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        The best starting point is the Discovery Audit. It provides a clear picture of where your book currently stands, why it may not be reaching the right readers, and what steps will make the most meaningful difference. From there, we can determine whether a full strategy or ongoing partnership makes sense for your goals.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── BLOG ── -->
+    <section class="blog" id="blog">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-label">Publishing Insights</div>
+                <h2 class="section-headline">Strategy & Thinking for Serious Authors.</h2>
+                <p class="section-subhead">Practical insight on book discovery, positioning, and building a sustainable publishing career.</p>
+            </div>
+            <div class="blog-grid">
+                <a href="#" class="blog-card fade-in">
+                    <div class="blog-card-image">
+                        📉
+                        <span class="blog-card-category">Amazon Strategy</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-title">Why Great Books Stay Invisible on Amazon</div>
+                        <p class="blog-card-excerpt">The algorithm doesn't know your book is extraordinary. Here's what it does look at—and how to give your book the signals it needs to surface.</p>
+                        <div class="blog-card-meta">Read Article →</div>
+                    </div>
+                </a>
+                <a href="#" class="blog-card fade-in fade-in-delay-1">
+                    <div class="blog-card-image">
+                        🔑
+                        <span class="blog-card-category">Metadata</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-title">Why Metadata Matters More Than Most Authors Realize</div>
+                        <p class="blog-card-excerpt">Your metadata is often a reader's first introduction to your book. Most authors treat it as an afterthought. Here's how to think about it differently.</p>
+                        <div class="blog-card-meta">Read Article →</div>
+                    </div>
+                </a>
+                <a href="#" class="blog-card fade-in fade-in-delay-2">
+                    <div class="blog-card-image">
+                        🎙️
+                        <span class="blog-card-category">Reader Growth</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-title">How Reader Communities Can Expand Your Reach</div>
+                        <p class="blog-card-excerpt">The most effective word-of-mouth marketing doesn't come from ads. It comes from communities of passionate readers who share what they love.</p>
+                        <div class="blog-card-meta">Read Article →</div>
+                    </div>
+                </a>
+                <a href="#" class="blog-card fade-in">
+                    <div class="blog-card-image">
+                        🏷️
+                        <span class="blog-card-category">Positioning</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-title">Building an Author Brand That Readers Remember</div>
+                        <p class="blog-card-excerpt">Your author brand isn't just a website and a headshot. It's the promise readers make to themselves when they pick up one of your books.</p>
+                        <div class="blog-card-meta">Read Article →</div>
+                    </div>
+                </a>
+                <a href="#" class="blog-card fade-in fade-in-delay-1">
+                    <div class="blog-card-image">
+                        📅
+                        <span class="blog-card-category">Launch Strategy</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-title">What Every Debut Author Should Know Before Launch Day</div>
+                        <p class="blog-card-excerpt">Launch day rarely determines a book's long-term success. What you do in the months before and after matters far more than the day itself.</p>
+                        <div class="blog-card-meta">Read Article →</div>
+                    </div>
+                </a>
+                <a href="#" class="blog-card fade-in fade-in-delay-2">
+                    <div class="blog-card-image">
+                        🔗
+                        <span class="blog-card-category">Series Marketing</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-title">Series Marketing: Turning One Reader into a Lifetime Fan</div>
+                        <p class="blog-card-excerpt">Every reader who finishes your first book is a potential series fan. Most authors leave that opportunity on the table. Here's how to capture it.</p>
+                        <div class="blog-card-meta">Read Article →</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CONTACT SECTION ── -->
+    <section class="contact-section" id="contact">
+        <div class="contact-wrapper">
+            <!-- Left: Info + Social -->
+            <div class="contact-info fade-in">
+                <div class="contact-photo-frame">
+                    <img src="ellis.jpg" alt="Sophie Ellis Clark">
+                </div>
+                <div class="section-label">Get In Touch</div>
+                <h2 class="section-headline">Let's Talk About Your Book.</h2>
+                <p class="contact-info-intro">
+                    Whether you have a specific project in mind or simply want to understand what's holding your book back, I'm happy to hear from you. Fill in the form and I'll be in touch within two business days.
+                </p>
+
+                <div class="contact-detail-list">
+                    <div class="contact-detail-item">
+                        <div class="contact-detail-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="contact-detail-label">Email</div>
+                            <a href="mailto:sophieclark.discoverybooks@gmail.com" class="contact-detail-value">sophieclark.discoverybooks@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-detail-item">
+                        <div class="contact-detail-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="contact-detail-label">Response Time</div>
+                            <span class="contact-detail-value">Within 2 business days</span>
+                        </div>
+                    </div>
+                    <div class="contact-detail-item">
+                        <div class="contact-detail-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="2" y1="12" x2="22" y2="12"/>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="contact-detail-label">Availability</div>
+                            <span class="contact-detail-value">Authors Worldwide Welcome</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Connect -->
+                <div class="social-connect-label">Connect with Sophie</div>
+                <div class="social-links">
+
+                    <!-- Instagram -->
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+
+                    <!-- X / Twitter -->
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X / Twitter">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+
+                    <!-- TikTok -->
+                    <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/>
+                        </svg>
+                    </a>
+
+                    <!-- Email -->
+                    <a href="mailto:sophieclark.discoverybooks@gmail.com" class="social-link" aria-label="Send Email">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- Right: Contact Form -->
+            <div class="contact-form-wrapper fade-in fade-in-delay-1">
+                <div id="formContent">
+                    <div class="contact-form-title">Send a Message</div>
+                    <p class="contact-form-subtitle">Tell me about your book and what you're hoping to achieve. The more detail you share, the better I can prepare for our first conversation.</p>
+
+                    <form id="contactForm" action="https://formspree.io/f/mrenkavg" method="POST" onsubmit="handleSubmit(event)" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="firstName">First Name <span>*</span></label>
+                                <input class="form-input" type="text" id="firstName" name="firstName" placeholder="Sophie" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="lastName">Last Name <span>*</span></label>
+                                <input class="form-input" type="text" id="lastName" name="lastName" placeholder="Clark" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email Address <span>*</span></label>
+                            <input class="form-input" type="email" id="email" name="email" placeholder="you@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="bookTitle">Book Title</label>
+                            <input class="form-input" type="text" id="bookTitle" name="bookTitle" placeholder="The title of your book">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="genre">Genre <span>*</span></label>
+                                <select class="form-select" id="genre" name="genre" required>
+                                    <option value="" disabled selected>Select genre</option>
+                                    <option>Literary Fiction</option>
+                                    <option>Commercial Fiction</option>
+                                    <option>Romance</option>
+                                    <option>Thriller & Mystery</option>
+                                    <option>Science Fiction</option>
+                                    <option>Fantasy</option>
+                                    <option>Historical Fiction</option>
+                                    <option>Horror</option>
+                                    <option>Non-Fiction</option>
+                                    <option>Memoir</option>
+                                    <option>Self-Help</option>
+                                    <option>Business</option>
+                                    <option>Children's</option>
+                                    <option>Young Adult</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="authorType">Author Type <span>*</span></label>
+                                <select class="form-select" id="authorType" name="authorType" required>
+                                    <option value="" disabled selected>Select type</option>
+                                    <option>Debut Author</option>
+                                    <option>Self-Published</option>
+                                    <option>Traditionally Published</option>
+                                    <option>Hybrid Author</option>
+                                    <option>Small Press / Publisher</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="service">Service of Interest</label>
+                            <select class="form-select" id="service" name="service">
+                                <option value="" disabled selected>Select a service</option>
+                                <option>Discovery Audit</option>
+                                <option>Discovery Strategy</option>
+                                <option>Discovery Partnership</option>
+                                <option>Amazon Optimization</option>
+                                <option>Author Brand Development</option>
+                                <option>Book Launch Services</option>
+                                <option>Series & Catalog Growth</option>
+                                <option>Not sure yet — need guidance</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="message">Tell Me About Your Book <span>*</span></label>
+                            <textarea class="form-textarea" id="message" name="message" placeholder="Share a brief description of your book, where it's currently available, what marketing you've tried so far, and what specific challenges you're facing with discoverability..." required></textarea>
+                        </div>
+
+                        <div class="form-checkbox-group">
+                            <input class="form-checkbox" type="checkbox" id="consent" name="consent" required>
+                            <label class="form-checkbox-label" for="consent">
+                                I understand that Sophie Ellis Clark will use the information I provide to respond to my enquiry. I agree to be contacted regarding my project and relevant services.
+                            </label>
+                        </div>
+
+                        <button type="submit" class="form-submit">
+                            Send Message
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                        </button>
+
+                        <p class="form-note">Your information is kept strictly confidential and never shared with third parties.</p>
+                    </form>
+                </div>
+
+                <!-- Success State -->
+                <div class="form-success" id="formSuccess">
+                    <div class="form-success-icon">✦</div>
+                    <div class="form-success-title">Message Received</div>
+                    <p class="form-success-body">Thank you for reaching out. I've received your message and will be in touch within two business days at <strong>sophieclark.discoverybooks@gmail.com</strong>. I look forward to learning more about your book.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CTA BANNER ── -->
+    <section class="cta-banner">
+        <div class="cta-banner-inner">
+            <div class="cta-banner-eyebrow">Begin Here</div>
+            <h2 class="cta-banner-headline">Your Book Deserves<br>to Be <em>Found.</em></h2>
+            <p class="cta-banner-body">The first step is understanding exactly why your book isn't reaching the right readers—and building a clear, actionable strategy to change that.</p>
+            <div class="cta-banner-actions">
+                <a href="#contact" class="btn-gold">
+                    Book Your Discovery Audit
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <a href="#services" class="btn-outline-light">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-brand-name">Sophie Ellis Clark</div>
+                    <div class="footer-brand-tagline">Book Discovery & Positioning</div>
+                    <p class="footer-brand-desc">Helping exceptional books reach the readers they were written for. Research-driven strategy for authors who are serious about long-term visibility.</p>
+
+                    <!-- Footer Social Icons -->
+                    <div class="footer-social-links">
+
+                        <!-- Instagram -->
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+
+                        <!-- X / Twitter -->
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="X / Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+
+                        <!-- TikTok -->
+                        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/>
+                            </svg>
+                        </a>
+
+                        <!-- Email -->
+                        <a href="mailto:sophieclark.discoverybooks@gmail.com" class="footer-social-link" aria-label="Email">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </a>
+
+                    </div>
+                </div>
+                <div>
+                    <div class="footer-col-title">Navigate</div>
+                    <ul class="footer-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#approach">Methodology</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#packages">Packages</a></li>
+                        <li><a href="#clients">Who I Serve</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer-col-title">Resources</div>
+                    <ul class="footer-links">
+                        <li><a href="#blog">Publishing Insights</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer-col-title">Services</div>
+                    <ul class="footer-links">
+                        <li><a href="#packages">Discovery Audit</a></li>
+                        <li><a href="#packages">Discovery Strategy</a></li>
+                        <li><a href="#packages">Discovery Partnership</a></li>
+                        <li><a href="#services">Amazon Optimization</a></li>
+                        <li><a href="#services">Author Branding</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copy">© 2025 Sophie Ellis Clark. All rights reserved.</div>
+                <div class="footer-bottom-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ── NAVIGATION SCROLL ──
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 32);
+        });
+
+        // ── MOBILE MENU ──
+        const navToggle = document.getElementById('navToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        let menuOpen = false;
+
+        navToggle.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+            mobileMenu.classList.toggle('open', menuOpen);
+            const spans = navToggle.querySelectorAll('span');
+            if (menuOpen) {
+                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+            } else {
+                spans[0].style.transform = '';
+                spans[1].style.opacity = '';
+                spans[2].style.transform = '';
+            }
+        });
+
+        function closeMobileMenu() {
+            menuOpen = false;
+            mobileMenu.classList.remove('open');
+            const spans = navToggle.querySelectorAll('span');
+            spans[0].style.transform = '';
+            spans[1].style.opacity = '';
+            spans[2].style.transform = '';
+        }
+
+        // ── FAQ TOGGLE ──
+        function toggleFaq(button) {
+            const answer = button.nextElementSibling;
+            const isOpen = answer.classList.contains('open');
+            document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+            document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('active'));
+            if (!isOpen) {
+                answer.classList.add('open');
+                button.classList.add('active');
+            }
+        }
+
+        // ── CONTACT FORM SUBMIT ──
+        function handleSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const required = form.querySelectorAll('[required]');
+            let valid = true;
+
+            required.forEach(field => {
+                if (!field.value.trim() || (field.type === 'checkbox' && !field.checked)) {
+                    field.style.borderColor = '#c0392b';
+                    valid = false;
+                } else {
+                    field.style.borderColor = '';
+                }
+            });
+
+            if (!valid) return;
+
+            const btn = form.querySelector('.form-submit');
+            btn.textContent = 'Sending…';
+            btn.disabled = true;
+
+            const data = new FormData(form);
+
+            fetch(form.action, {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            })
+            .then(response => {
+                if (response.ok) {
+                    document.getElementById('formContent').style.display = 'none';
+                    document.getElementById('formSuccess').classList.add('show');
+                } else {
+                    btn.textContent = 'Send Message';
+                    btn.disabled = false;
+                    alert('There was a problem sending your message. Please try again or email me directly.');
+                }
+            })
+            .catch(() => {
+                btn.textContent = 'Send Message';
+                btn.disabled = false;
+                alert('There was a problem sending your message. Please try again or email me directly.');
+            });
+        }
+
+        // ── SCROLL ANIMATIONS ──
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // ── SMOOTH NAV LINKS ──
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
